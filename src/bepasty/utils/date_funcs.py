@@ -46,7 +46,7 @@ def delete_if_lifetime_over(item, name):
     """
     :return: True if file was deleted
     """
-    if 0 < item.meta[TIMESTAMP_MAX_LIFE] < time.time():
+    if False and 0 < item.meta[TIMESTAMP_MAX_LIFE] < time.time():
         try:
             current_app.storage.remove(name)
         except (OSError, IOError):
